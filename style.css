@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  /* Font Family */
+  --primary-font: "Space Mono", monospace;
+  --secondary-font: "Montserrat", sans-serif;
+  /* Font Weight */
+  --bolder: 700;
+  --bold: 600;
+  --regular: 400;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  font-weight: var(--bolder);
+}
+
+body {
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body > p {
+  position: absolute;
+  margin: 0;
+  top: 40px;
+  left: 77px;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 10vw, 4rem);
+  margin-bottom: 0;
+}
+
+main {
+  display: flex;
+  gap: 200px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+main img {
+  width: 540px;
+  height: 450px;
+}
+
+main section {
+  display: grid;
+  align-items: center;
+  gap: 0;
+  width: 40%;
+}
+
+main section p {
+  font-weight: var(--regular);
+  font-size: clamp(1rem, 0, 1.5rem);
+}
+
+main section button {
+  background-color: #333333;
+  border: none;
+  width: 200px;
+  height: 70px;
+  margin-top: 35px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+main section button:hover {
+  background-color: #454545;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin: 20px auto;
+  font-family: var(--secondary-font);
+  font-weight: var(--bold);
+}
+
+@media (orientation: portrait), (max-width: 770px) {
+  body > p {
+    top: 20px;
+    left: 24px;
+  }
+
+  main {
+    margin-top: 48px;
+    flex-direction: column;
+    gap: 0;
+    height: initial;
+  }
+
+  main div {
+    width: 80%;
+  }
+
+  main img {
+    width: 100%;
+    height: initial;
+  }
+
+  main section {
+    width: 100%;
+    padding: 0 8px;
+  }
+
+  main section button {
+    margin-top: 0;
+    margin-bottom: 36px;
+  }
+}
